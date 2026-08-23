@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato de Producción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 4px;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        /* Estilo visual para campos fijos */
+        input[readonly] {
+            background-color: #e9ecef;
+            color: #495057;
+            cursor: not-allowed;
+            border-color: #ced4da;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .btn-clear {
+            background-color: #dc3545;
+            margin-top: 8px;
+        }
+        .btn-clear:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Captura de Producción</h2>
+    <form id="prodForm">
+        <!-- Campos Editables -->
+        <div class="form-group">
+            <label>FECHA:</label>
+            <input type="text" id="fecha" value="21/08/2026">
+        </div>
+
+        <!-- Campos Fijos (Solo Lectura) -->
+        <div class="form-group">
+            <label>TECNOLOGÍA (Fijo):</label>
+            <input type="text" id="tecnologia" value="FIBRA ÓPTICA" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>EXPEDIENTE:</label>
+            <input type="text" id="expediente" value="0960401">
+        </div>
+
+        <div class="form-group">
+            <label>ÁREA (Fijo):</label>
+            <input type="text" id="area" value="VERACRUZ" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>METRAJE AÉREO (MTS):</label>
+            <input type="text" id="metrajeAereo" value="217">
+        </div>
+
+        <div class="form-group">
+            <label>METRAJE SUBTERRÁNEO (MTS):</label>
+            <input type="text" id="metrajeSubterraneo" value="">
+        </div>
+
+        <div class="form-group">
+            <label>OS:</label>
+            <input type="text" id="os" value="088847745">
+        </div>
+
+        <div class="form-group">
+            <label>TELÉFONO:</label>
+            <input type="text" id="telefono" value="2291942978">
+        </div>
+
+        <div class="form-group">
+            <label>NOMBRE CLIENTE:</label>
+            <input type="text" id="cliente" value="Santa Izamar García Rebolledo">
+        </div>
+
+        <div class="form-group">
+            <label>TIPO TAREA:</label>
+            <input type="text" id="tipoTarea" value="A0MLPBG">
+        </div>
+
+        <div class="form-group">
+            <label>COPE:</label>
+            <input type="text" id="cope" value="LERDO">
+        </div>
+
+        <div class="form-group">
+            <label>EMPRESA (Fijo):</label>
+            <input type="text" id="empresa" value="CST SYSTEM" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>TÉCNICO (Fijo):</label>
+            <input type="text" id="tecnico" value="Gregorio Castro del Pilar" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>SUPERVISOR (Fijo):</label>
+            <input type="text" id="supervisor" value="RICARDO RIVERA" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>CLARO VÍDEO (Fijo):</label>
+            <input type="text" id="claroVideo" value="SI" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>DISTRITO:</label>
+            <input type="text" id="distrito" value="HVR0019">
+        </div>
+
+        <div class="form-group">
+            <label>TERMINAL:</label>
+            <input type="text" id="terminal" value="K8">
+        </div>
+
+        <div class="form-group">
+            <label>PUERTO:</label>
+            <input type="text" id="puerto" value="8">
+        </div>
+
+        <div class="form-group">
+            <label>ALFANUMÉRICO:</label>
+            <input type="text" id="alfanumerico" value="ZTEG2617B479">
+        </div>
+
+        <div class="form-group">
+            <label>TIPO DE BAJANTE (Fijo):</label>
+            <input type="text" id="tipoBajante" value="NORMAL" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>COORDENADAS DOMICILIO:</label>
+            <input type="text" id="coordDomicilio" value="19.174028,-96.180936">
+        </div>
+
+        <div class="form-group">
+            <label>COORDENADAS TERMINAL:</label>
+            <input type="text" id="coordTerminal" value="19.173658,-96.179651">
+        </div>
+
+        <button type="button" class="btn" onclick="copiarFormato()">Copiar Formato</button>
+        <button type="button" class="btn btn-clear" onclick="limpiarVariables()">Limpiar Campos Variables</button>
+    </form>
+</div>
+
+<script>
+    function copiarFormato() {
+        const texto = 
+`◼️ *FECHA:* 
+${document.getElementById('fecha').value}
+◼️ *TECNOLOGÍA* ${document.getElementById('tecnologia').value} 
+◼️ *EXPEDIENTE:* *
+${document.getElementById('expediente').value}
+◼️ *ÁREA:* ${document.getElementById('area').value} 
+◼️ *METRAJE AEREO:* MTS ${document.getElementById('metrajeAereo').value}
+◼️ *METRAJE SUTERRANEO*
+MTS ${document.getElementById('metrajeSubterraneo').value}
+◼️ *OS:* ${document.getElementById('os').value}
+◼️ *TELÉFONO:*
+${document.getElementById('telefono').value}
+◼️ *NOMBRE CLIENTE* ${document.getElementById('cliente').value} 
+◼️ *TIPO TAREA:*
+${document.getElementById('tipoTarea').value}
+◼️ *COPE:* ${document.getElementById('cope').value} 
+◼️ *EMPRESA:*  ${document.getElementById('empresa').value} 
+◼️ *TÉCNICO:* ${document.getElementById('tecnico').value} 
+◼️ *SUPERVISOR:* ${document.getElementById('supervisor').value} 
+◼️ *CLARO VÍDEO Activo/No Activo):* ${document.getElementById('claroVideo').value}
+◼️ *DISTRITO:* ${document.getElementById('distrito').value}
+◼️ *TERMINAL:* ${document.getElementById('terminal').value}
+◼️ *PUERTO:* ${document.getElementById('puerto').value}
+◼️ *ALFANUMERICO:*
+${document.getElementById('alfanumerico').value}
+◼️ *TIPO DE BAJANTE (NORMAL/ZTE/HUAWEII):* ${document.getElementById('tipoBajante').value} 
+◾ *COORDENADAS DOMICILIO:*
+${document.getElementById('coordDomicilio').value}
+◾ *COORDENADAS TERMINAL:*
+${document.getElementById('coordTerminal').value}`;
+
+        navigator.clipboard.writeText(texto).then(() => {
+            alert("¡Formato copiado al portapapeles!");
+        }).catch(err => {
+            alert("Error al copiar automático.");
+        });
+    }
+
+    function limpiarVariables() {
+        // Limpia solo los campos que cambian en cada reporte
+        const idsVariables = [
+            'expediente', 'metrajeAereo', 'metrajeSubterraneo', 'os', 
+            'telefono', 'cliente', 'tipoTarea', 'cope', 'distrito', 
+            'terminal', 'puerto', 'alfanumerico', 'coordDomicilio', 'coordTerminal'
+        ];
+        idsVariables.forEach(id => {
+            document.getElementById(id).value = '';
+        });
+    }
+</script>
+
+</body>
+</html>
